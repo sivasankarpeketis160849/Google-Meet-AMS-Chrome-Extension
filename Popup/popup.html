@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./bootstrap.min.css">
+    <script src="./moment.js"></script>
+    <script src="./jquery-3.6.0.min.js"></script>
+    <script src="./popup.js"></script>
+    <style>
+        label {
+            text-align: right;
+            clear: both;
+            float: left;
+            margin-right: 15px;
+        }
+    </style>
+</head>
+
+<body style="width: 400px; height: 400px;">
+    <div ">
+        <div class="card m-0">
+        <div class="card-header bg-dark text-white p-0">
+            <h6 class="font-weight-bold" style="margin: 0.5em;">Google Meet AMS</h6>
+        </div>
+
+        <!-- Inputs, events, error and success messages.-->
+        <div class="card-body">
+            <h6 id="refreshError" class="d-none text-danger font-weight-bold">Error: Refresh freq. must be in-between 5 - 60 min.</h6>
+            <div style="margin-bottom: 0.5em;">
+                <label for="refresh" class="font-weight-bold">Refresh frequency : </label>
+                <input style="width: 80px; height: 33px;" id="refresh" type="number" value="10" class="form-control">
+            </div>
+            <p id="monitorStartedText" class="d-none"></p>
+            <input type="button" id="startMonitoring" value="Start Monitoring" class="btn btn-info btn-sm font-weight-bold">
+            <input type="button" id="export" value="Export" class="btn btn-info btn-sm font-weight-bold">
+        </div>
+
+        <!-- Instructions -->
+        <div class="card-body">
+            <h6 class="text-dark font-weight-bold p-0">Instructions for the user :</h6>
+            <h6 class="text-dark p-0">1. Add <span class="text-success">Attendance refresh frequency</span> to refresh
+                the user's status (in Minutes).<br> Refresh frequency must be in-between 5 to 60 min.</h6>
+            <h6 class="text-dark p-0">2. Join the meet and click on "<span class="text-success">Start
+                    Monitoring</span>".</h6>
+            <h6 class="text-dark p-0">3. Click on <span class="text-success">Export</span> to export the attendance.
+            </h6>
+            <h6 class="p-0 text-danger">Remember, clicking on Export will automatically stop the monitoring.</h6>
+        </div>
+
+
+        <!-- Footer -->
+        <div class="card-footer text-white bg-dark p-0">
+            <h6 class="float-right" style="margin: 0.5em;">Developed By: <span class="font-weight-bold font-italic">Mohan Vaddi</span>.</h6>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
